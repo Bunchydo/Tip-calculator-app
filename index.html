@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="main-container">
+        <!-- Left side of container-->
+        <section class="leftside">
+          <!-- Entering Bill amount-->
+          <div class="bill-input-main-section">
+            <h4 class="h4-titles">Bill</h4>
+            <div class="input-section">
+              <img class="image-icon-align"  src="images/icon-dollar.svg" alt="" />
+              <input class="input-field" id="billInputField" type="number" step="any" placeholder="0" />
+            </div>
+          </div>
+          <!-- Selecting Tip %-->
+          <div class="tip-input-main-section">
+            <h4 class="h4-titles">Select Tip %</h4>
+            <div class="button-grid">
+              <button class="general-button-design button-1-grid" id="button1">5%</button>
+              <button class="general-button-design button-2-grid" id="button2" >10%</button>
+              <button class="general-button-design button-3-grid" id="button3">15%</button>
+              <button class="general-button-design button-4-grid" id="button4">25%</button>
+              <button class="general-button-design button-5-grid"id="button5">50%</button>
+              <input class="general-button-design button-6-grid custom-button-design" id="button6" placeholder="Custom">
+            </div>
+            
+          </div>
+          <div class="input-for-number-of-people-main-section">
+            
+              <h4 class="h4-titles">Number of People</h4>
+              <div class="input-section">
+                  <img class="image-icon-align"src="images/icon-person.svg" alt="" />
+                
+                <input class="input-field" id="numberOfInputField" type="number" step="any" placeholder="0" />
+              </div>
+          
+          </div>
+        </section>
+
+        <!-- Right side of container-->
+        <section class="rightside">
+          <div class="rightside-top-section">
+            <div class="showing-final-tip-amount-per-peson-container">
+            <div class="tip-amount-title"><span class="right-side-main-title-primary-color">Tip Amount</span>
+               <br> <span class="right-side-main-title-secondary-color">/ person</span> </div>
+            <div class="tip-amount-per-person-price color-for-final-prices" id="tipAmountNumberToEdit" >$0.00</div>
+          </div>
+          <div class="showing-final-price-per-person-container">
+            <div class="total-title"><span class="right-side-main-title-primary-color ">Total</span> <br> <span class="right-side-main-title-secondary-color">/ person</span> </div>
+            <div class="total-amount-per-person-price color-for-final-prices" id="totalPriceNumberToEdit">$0.00</div>
+          </div>
+          </div>
+          
+          <div class="rightside-bottom-section">
+            <div class="reset-button" id="resetButton">
+              <button>RESET</button>
+            </div>
+          </div>
+          
+        </section>
+      </section>
+    </main>
+  </body>
+  <script src="script.js"></script>
+
+</html>

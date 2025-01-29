@@ -1,0 +1,459 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input::placeholder{
+  color: #A0B7B7;
+}
+:root {
+  --titleTextColor: #517f83;
+  --primary-background-color: #c5e4e7;
+  --secondary-background-color: white;
+  --primary-button-color: #00474b;
+  --secondary-button-color: #26c2ad;
+  --highlighted-prices-color: #26c2ad;
+  --primary-text-color: #f4ffff;
+  --right-side-backgorund-color: #00474b;
+  --input-background-color: #f3f8fb;
+  --custom-button-color:#88A19E;
+  --white-text-color: white;
+  --grey-text-color:#86B6B9;
+}
+
+@font-face {
+  font-family: SpaceMono-Regular;
+  src: url(fonts/Space_Mono/SpaceMono-Regular.ttf);
+}
+
+@font-face {
+  font-family: SpaceMono-Bold;
+  src: url(fonts/Space_Mono/SpaceMono-Bold.ttf);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--primary-background-color);
+  font-family: SpaceMono-Regular;
+  -webkit-text-size-adjust: 100%; /* Prevent font scaling in Safari/Chrome */
+  -moz-text-size-adjust: 100%; /* Prevent font scaling in Firefox */
+  -ms-text-size-adjust: 100%; /* Prevent font scaling in IE */
+  text-size-adjust: 100%; /* For modern browsers */
+}
+
+main {
+  width: 60%;
+  height: 60%;
+}
+
+.main-container {
+  max-width: 100%;
+
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-background-color);
+  box-sizing: border-box;
+  border-radius: 15px;
+  padding: 3%;
+}
+.leftside {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-sizing: border-box;
+  padding: 0px 2%;
+box-sizing: border-box;
+}
+
+.h4-titles {
+  color: var(--titleTextColor);
+  position: relative;
+  /* top: -10px; */
+  top: -3%;
+}
+
+.general-button-design {
+  background-color: var(--primary-button-color);
+  color: #f4ffff;
+  border: none;
+  padding: 3px 13px;
+  border-radius: 5px;
+  height: 35px;
+  font-size: 1.25rem;
+  font-weight: 200;
+  font-family: SpaceMono-Bold;
+}
+
+.general-button-design:hover:not(:last-child){
+  background-color: #9FE8DF;
+  transition: 0.8s;
+  cursor: pointer;
+}
+.rightside {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: var(--right-side-backgorund-color);
+  border-radius: 15px;
+  padding: 3%;
+  position: relative;
+
+}
+
+.rightside-top-section{
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.rightside-bottom-section{
+  height: 50%;
+ display: flex;
+ align-items: flex-end;
+}
+
+.reset-button{
+  width: 100%;
+  height: 40px;
+
+}
+.reset-button button{
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  background-color: var(--secondary-button-color);
+  font-family: SpaceMono-Bold;
+  color: var(--primary-button-color);
+}
+
+.reset-button button:hover{
+  background-color: #9FE8DF;
+}
+
+.showing-final-tip-amount-per-peson-container{
+  display: flex;
+  align-items: center;
+}
+.tip-amount-title{
+  width: 50%;
+}
+.tip-amount-per-person-price{
+  width: 50%;
+}
+
+.showing-final-price-per-person-container{
+  display: flex;
+  align-items: center;
+
+}
+.right-side-main-title-secondary-color{
+  color: var(--grey-text-color);
+  font-size: 0.813rem;
+}
+.total-title{
+  width: 50%;
+}
+
+.color-for-final-prices{
+ color: var(--highlighted-prices-color); 
+  font-family: SpaceMono-Bold;
+  font-size: 2rem;
+}
+
+.right-side-main-title-primary-color{
+  color: var(--white-text-color);
+}
+.right-side-main-title-secondary-color{
+  color: var(--grey-text-color);
+}
+.custom-button-design{
+  background-color: var(--input-background-color);
+color: var(--custom-button-color);
+font-family: SpaceMono-Bold;
+}
+
+.custom-button-design::placeholder{
+  font-size: 13px;
+}
+
+.h4-titles{
+  height: auto;
+}
+.bill-input-main-section{
+  height: 20%;
+}
+
+.input-section {
+  position: relative;
+  height: 50%;
+  border-radius: 6px;
+}
+
+
+.image-icon-align {
+  position: absolute;
+  top: 50%;
+  left: 4%;
+  transform: translateY(-50%);
+}
+
+.input-field {
+  width: 100%;
+  height: 100%;
+  text-align: right;
+  background-color: var(--input-background-color);
+  border:none;
+  outline: none;
+  font-family: SpaceMono-Bold;
+  font-size: 1.5rem;
+  color: var(--primary-button-color);
+  border-radius: 6px;
+
+}
+
+.input-field:hover{
+  border: 2px solid #5FAAA1;
+}
+
+
+.tip-input-main-section{
+
+  height: 33.33%;
+  width: 100%;
+
+}
+
+.input-for-number-of-people-main-section{
+  height: 20%;
+}
+.button-grid, .button-grid input  {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+
+
+.button-1-grid {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.button-2-grid {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.button-3-grid {
+  grid-column: 3;
+  grid-row: 1;
+}
+.button-4-grid {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.button-5-grid {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.button-6-grid {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+@media screen and (max-width:938px) {
+  /* .custom-button-design::placeholder {
+    font-size: 10px;
+  } */
+
+  .main {
+  width: 60%;
+  height: auto;
+  }
+
+
+  .main-container {
+    max-width: 100%;
+  
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-background-color);
+    box-sizing: border-box;
+    border-radius: 15px;
+    padding: 3%;
+  }
+  .leftside {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding: 0px 2%;
+  box-sizing: border-box;
+  }
+  .rightside {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: var(--right-side-backgorund-color);
+    border-radius: 15px;
+    padding: 3%;
+    position: relative;
+  
+  }
+
+  .button-grid, .button-grid input  {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    flex-wrap: wrap;
+    height: auto;
+  }
+  
+  
+  
+  .button-1-grid {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+  .button-2-grid {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  
+  .button-3-grid {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .button-4-grid {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  
+  .button-5-grid {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  
+  .button-6-grid {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .bill-input-main-section{
+    margin-bottom: 20px;
+  }
+.tip-input-main-section{
+  margin-bottom: 20px;
+}
+.input-for-number-of-people-main-section{
+  margin-bottom: 20px;
+}
+.showing-final-tip-amount-per-peson-container{
+  margin-bottom: 20px;
+}
+
+.showing-final-price-per-person-container{
+  margin-bottom: 20px;
+}
+
+.h4-titles {
+  color: var(--titleTextColor);
+  position: relative;
+  /* top: -10px; */
+  top: -2px;
+}
+}
